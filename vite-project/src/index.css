@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+.header {
+  background-color: white;
+  width: 100%;
+  height: 60px;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+.logo-image {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.logo-image img {
+  width: 50px;
+  line-height: 30px;
+}
+
+.logo-image h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.date {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  margin-right: 20px;
+}
+.quote {
+  color: white;
+  margin-top: 30px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.quote h1 {
+  font-size: 30px;
+  padding-bottom: 7px;
+}
+.writing-image img {
+  width: 150px;
+  margin-top: 10px;
+}
+
+.inform-place {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 50px;
+}
+
+.inform-place input {
+  padding: 8px 40px;
+  border: 1px solid white;
+}
+.inform-place input:focus {
+  outline: none;
+}
+.inform-place .add {
+  color: white;
+  border: 1px solid white;
+  padding: 7px 15px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 300;
+  border-right: 10px;
+}
+
+.list-place {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.checbox {
+  margin-right: 5px;
+}
+.list {
+  margin-right: 250px;
+}
+.list li {
+  color: white;
+  font-size: 20px;
+  list-style: none;
+}
+.icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+.icons .edit {
+  margin-right: 5px;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.icons .edit i {
+  font-size: 15px;
+}
+.icons .delete {
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.icons .deletei {
+  font-size: 15px;
+}
+.edit i {
+  color: green;
+  list-style: none;
+}
+
+.delete i {
+  color: red;
+}
+
+.checbox input {
+  padding: 10px 10px;
+}
