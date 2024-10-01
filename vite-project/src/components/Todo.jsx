@@ -1,4 +1,22 @@
+import { useState } from "react";
+import List from "./List";
+
 export default function Todo() {
+  const [inputValue, setInputValue] = useState("");
+  const [arrayValue, setArrayValue] = useState([]);
+
+  const addTodo = () => {
+    if (inputValue.trim() !== "") {
+      setArrayValue((prevArray) => [...prevArray, inputValue]);
+      setInputValue("");
+    }
+  };
+
+  const handleSubmission = (e) => {
+    e.preventDefault();
+    addTodo();
+  };
+
   return (
     <div>
       <div className="header">
@@ -17,38 +35,31 @@ export default function Todo() {
           the rest.
         </h1>
         <p>
-          <small>Leo Babauta, Author and journalist</small>{" "}
+          <small>Leo Babauta, Author and journalist</small>
         </p>
         <div className="writing-image">
           <img src="./images/todo.jpeg" alt="" />
         </div>
       </div>
+
       <div className="inform-place">
-        <form action="">
-          <input type="text" placeholder="Add your list here" />
+        <form action="" onSubmit={handleSubmission}>
+          <input
+            type="text"
+            placeholder="Add your list here"
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+          />
         </form>
-        <div className="add">ADD</div>
+        <div className="add" onClick={addTodo}>
+          ADD
+        </div>
       </div>
 
-      <div className="list-place">
-        <div className="checbox">
-          <form action="">
-            <input type="checkbox" name="" id="" />
-          </form>
-        </div>
-        <div className="list">
-          <ul>
-            <li>Have you seen me today</li>
-          </ul>
-        </div>
-        <div className="icons">
-          <div className="edit">
-            <i className="fa fa-pencil" aria-hidden="true"></i>
-          </div>
-          <div className="delete">
-            <i className="fa fa-trash" aria-hidden="true"></i>
-          </div>
-        </div>
+      <div>
+        {arrayValue.map((task, index) => (
+          <List key={index} todos={[task]} />
+        ))}
       </div>
     </div>
   );

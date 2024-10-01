@@ -82,45 +82,51 @@ body {
 }
 
 .list-place {
+  /* display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center; */
+  margin-top: 50px;
+}
+
+.checkbox {
+  margin-right: 5px;
+}
+.list ul li {
   display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
   margin-top: 50px;
 }
-
-.checbox {
-  margin-right: 5px;
-}
-.list {
-  margin-right: 250px;
-}
-.list li {
+li span {
   color: white;
   font-size: 20px;
   list-style: none;
+  margin-left: 10px;
 }
-.icons {
+/* .icons {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   align-content: center;
-}
-.icons .edit {
-  margin-right: 5px;
+} */
+.edit {
+  margin-left: 155px;
   background-color: white;
   padding: 5px 10px;
   border-radius: 5px;
+  margin-right: 5px;
 }
-.icons .edit i {
+.edit i {
   font-size: 15px;
 }
-.icons .delete {
+.delete {
   background-color: white;
   padding: 5px 10px;
   border-radius: 5px;
 }
-.icons .deletei {
+.deletei {
   font-size: 15px;
 }
 .edit i {
